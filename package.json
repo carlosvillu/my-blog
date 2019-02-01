@@ -1,0 +1,32 @@
+{
+  "name": "fb_ci_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sui-bundler dev",
+    "build": "sui-bundler build -C",
+    "predeploy": "npm run build",
+    "deploy": "npx firebase deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@s-ui/bundler": "4",
+    "@s-ui/lint": "2",
+    "firebase-tools": "6.3.0"
+  },
+  "dependencies": {
+    "firebase": "5.8.1",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "reset-css": "4.0.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@s-ui/lint/eslintrc.js"
+    ]
+  },
+  "sasslintConfig": "./node_modules/@s-ui/lint/sass-lint.yml"
+}
