@@ -1,19 +1,14 @@
 language: node_js
-
 branches:
   only:
   - master
-
 node_js:
 - '10'
-
 before_install:
-- openssl aes-256-cbc -K $encrypted_65329f5fbcde_key -iv $encrypted_65329f5fbcde_iv
-  -in servicesAccounts.tar.enc -out functions/servicesAccounts.tar -d
-
+- openssl aes-256-cbc -K $encrypted_a2bd5d39effe_key -iv $encrypted_a2bd5d39effe_iv
+  -in serviceAccount.json.enc -out functions/serviceAccount.json -d
 install:
 - npm install --force-online
 - npm install --only=dev --force-online
-
 script:
-  - npm run deploy
+- npm run deploy
