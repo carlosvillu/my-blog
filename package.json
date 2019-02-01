@@ -6,7 +6,7 @@
   "scripts": {
     "start": "sui-bundler dev",
     "build": "sui-bundler build -C",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cd functions && npm install",
     "deploy": "npx firebase deploy --token \"$FIREBASE_TOKEN\""
   },
   "keywords": [],
