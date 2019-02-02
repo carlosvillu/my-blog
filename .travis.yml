@@ -22,7 +22,7 @@ jobs:
       script:
       - npm run deploy:pre
     - stage: Deploy Pro
-      if: brach = master AND NOT type = pull_request
+      if: branch = master AND NOT type = pull_request
       env:
       - STAGE=production
       - HOST=us-central1-my-blog-8c83e.cloudfunctions.net
