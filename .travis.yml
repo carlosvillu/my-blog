@@ -17,14 +17,14 @@ jobs:
     - stage: Deploy Dev
       if: type = pull_request
       env:
-        STAGE=development
-        HOST=https://us-central1-my-blog-dev-12f60.cloudfunctions.net
+      - STAGE=development
+      - HOST=https://us-central1-my-blog-dev-12f60.cloudfunctions.net
       script:
-        - npm run deploy:pre
+      - npm run deploy:pre
     - stage: Deploy Pro
       if: brach = master AND NOT type = pull_request
       env:
-        STAGE=production
-        HOST=https://us-central1-my-blog-8c83e.cloudfunctions.net
+      - STAGE=production
+      - HOST=https://us-central1-my-blog-8c83e.cloudfunctions.net
       script:
-        - npm run deploy:pro
+      - npm run deploy:pro
