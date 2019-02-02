@@ -24,6 +24,9 @@
     "react-dom": "16.7.0",
     "reset-css": "4.0.1"
   },
+  "sui-bundler": {
+    "env": ["HOST"]
+  },
   "eslintConfig": {
     "extends": [
       "./node_modules/@s-ui/lint/eslintrc.js"
