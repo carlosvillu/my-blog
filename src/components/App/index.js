@@ -6,9 +6,8 @@ class App extends React.Component {
   }
 
   async componentDidMount() {
-    const resp = await window.fetch(
-      'https://us-central1-my-blog-8c83e.cloudfunctions.net/posts'
-    )
+    const host = process.env.HOST
+    const resp = await window.fetch(`${host}/posts`)
     const posts = await resp.json()
     this.setState({
       posts: posts.filter(Boolean)

@@ -6,9 +6,25 @@ node_js:
 - '10'
 before_install:
 - openssl aes-256-cbc -K $encrypted_a2bd5d39effe_key -iv $encrypted_a2bd5d39effe_iv
-  -in serviceAccount.json.enc -out functions/serviceAccount.json -d
+  -in secrets.tar.enc -out functions/secrets.tar -d
+- tar xvf ./functions/secrets.tar -C ./functions
 install:
 - npm install --force-online
 - npm install --only=dev --force-online
-script:
-- npm run deploy
+
+jobs:
+  include:
+    - stage: Deploy Dev
+      if: type = pull_request
+      env:
+        STAGE=development
+        HOST=https://us-central1-my-blog-dev-12f60.cloudfunctions.net
+      script:
+        - npm run deploy:pre
+    - stage: Deploy Pro
+      if: brach = master AND NOT type = pull_request
+      env:
+        STAGE=production
+        HOST=https://us-central1-my-blog-8c83e.cloudfunctions.net
+      script:
+        - npm run deploy:pro

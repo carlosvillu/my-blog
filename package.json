@@ -6,8 +6,10 @@
   "scripts": {
     "start": "sui-bundler dev",
     "build": "sui-bundler build -C",
-    "predeploy": "npm run build && cd functions && npm install",
-    "deploy": "npx firebase deploy --token \"$FIREBASE_TOKEN\""
+    "predeploy:pre": "firebase use development && firebase functions:config:set env.stage=\"development\" && cd functions && npm install",
+    "predeploy:pro": "firebase use production && firebase functions:config:set env.stage=\"production\" && cd functions && npm install",
+    "deploy:pre": "npx firebase deploy --token \"$FIREBASE_TOKEN\"",
+    "deploy:pro": "npx firebase deploy --token \"$FIREBASE_TOKEN\""
   },
   "keywords": [],
   "author": "",

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "my-blog-8c83e"
+    "production": "my-blog-8c83e"
+    "developement" : "my-blog-dev-12f60"
   }
 }
