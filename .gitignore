@@ -66,3 +66,4 @@ node_modules/
 public/
 serviceAccount.json
 serviceAccount.js
+.tern-port
