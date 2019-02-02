@@ -4,7 +4,7 @@ const functions = require('firebase-functions')
 const admin = require('firebase-admin')
 const path = require('path')
 
-const stage = functions.config().env ? functions.confing().env.stage : 'development'
+const stage = functions.config().env ? functions.config().env.stage : 'development'
 const serviceAccount = require(path.join(__dirname, 'serviceAccount.'+stage+'.json'))
 const databaseURL = stage === 'development' ? 'https://my-blog-dev-12f60.firebaseio.com' : 'https://my-blog-8c83e.firebaseio.com'
 
