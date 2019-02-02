@@ -7,7 +7,7 @@ class App extends React.Component {
 
   async componentDidMount() {
     const host = process.env.HOST
-    const resp = await window.fetch(`${host}/posts`)
+    const resp = await window.fetch(`https://${host}/posts`)
     const posts = await resp.json()
     this.setState({
       posts: posts.filter(Boolean)
