@@ -19,7 +19,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h1 className="App-title">My super Blog!</h1>
+        <h1 className="App-title">My super Blog INCREIBLE!</h1>
         {posts.map((post, index) => (
           <div key={index} className="App-post">
             <h2 className="App-titulo">{post.title}</h2>
