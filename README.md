@@ -4,3 +4,4 @@
 # URL:
 
 - production: https://my-blog-8c83e.firebaseapp.com/
+- development: https://my-blog-dev-12f60.firebaseapp.com
