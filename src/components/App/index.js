@@ -21,7 +21,7 @@ export default class App extends window.React.Component {
 
     return html`
       <div class="App">
-        <h1 class="App-title">My super Blog!!!!</h1>
+        <h1 class="App-title">My super Blog</h1>
         ${posts.map(
           (post, index) => html`
             <div class="App-post" key=${index}>
