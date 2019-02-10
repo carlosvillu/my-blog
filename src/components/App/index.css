@@ -1,0 +1,33 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 10px solid #fd02ba;
+}
+
+.App-post {
+  width: 640px;
+  margin-bottom: 15px;
+
+}
+
+.App-title {
+  font-size: 4rem;
+  margin-bottom: 65px;
+  color: coral;
+}
+
+.App-titulo {
+  color: cadetblue;
+  margin-bottom: 25.3px;
+  font-size: 2.5rem;
+}
+
+.App-description {
+  color: steelblue;
+  line-height: 1.3rem;
+}
