@@ -17,7 +17,8 @@
   "devDependencies": {
     "@s-ui/bundler": "4",
     "@s-ui/lint": "2",
-    "firebase-tools": "6.3.0"
+    "firebase-tools": "6.3.0",
+    "serve": "10.1.2"
   },
   "dependencies": {
     "react": "16.7.0",
@@ -25,7 +26,9 @@
     "reset-css": "4.0.1"
   },
   "sui-bundler": {
-    "env": ["HOST"]
+    "env": [
+      "HOST"
+    ]
   },
   "eslintConfig": {
     "extends": [
