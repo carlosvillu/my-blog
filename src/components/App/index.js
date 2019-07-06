@@ -1,4 +1,4 @@
-/* global React e html */
+/* global React  html */
 
 const Footer = React.lazy(() => import('../Footer/index.js'))
 
@@ -35,20 +35,5 @@ export default class App extends window.React.Component {
         </${React.Suspense}>
       </div>
     `
-
-    // return e(
-    //   'div',
-    //   {className: 'App'},
-    //   e('h1', {className: 'App-title'}, 'My superBlog!!!!'),
-    //   posts.map((post, index) =>
-    //     e(
-    //       'div',
-    //       {key: post.id, className: 'App-post', key: index},
-    //       e('h2', {className: 'App-titulo'}, post.title),
-    //       e('p', {className: 'App-description'}, post.description)
-    //     )
-    //   ),
-    //   Footer && e(Footer)
-    // )
   }
 }
