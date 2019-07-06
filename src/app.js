@@ -9,5 +9,4 @@ import App from './components/App/index.js'
     ReactDOM.render(html`<${App} />`, document.getElementById('app'))
 
   render()
-
-render()
+})()
