@@ -15,15 +15,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@s-ui/bundler": "4",
+    "@s-ui/bundler": "5",
     "@s-ui/lint": "2",
-    "firebase-tools": "6.3.0",
-    "serve": "10.1.2"
+    "firebase-tools": "7"
   },
   "dependencies": {
-    "react": "16.7.0",
-    "react-dom": "16.7.0",
-    "reset-css": "4.0.1"
+    "react": "16",
+    "react-dom": "16",
+    "reset-css": "4"
   },
   "sui-bundler": {
     "env": [
